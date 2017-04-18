@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="blastagator" fetch="https://github.com/blastagator/" />
+
+  <project name="android_device_lge_d801" path="device/lge/d801" remote="blastagator" revision="cm-13.0-twrp"/>
+
+</manifest>

@@ -202,3 +202,6 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf
+
+# Inherit TWRP Stuff
+$(call inherit-product, device/lge/g3-common/twrp/TwrpProduct.mk)
