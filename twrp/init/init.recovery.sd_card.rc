@@ -1,0 +1,24 @@
+##
+## Special init that is only copied (and thus used) if the variant has an External SD Card
+##
+
+on init
+
+    mkdir /external_sd 0700 root root
+    mkdir /mnt/media_rw 0700 media_rw media_rw
+    mkdir /mnt/media_rw/external_sd 0700 media_rw media_rw
+    export SECONDARY_STORAGE /external_sd
+    export EXTERNAL_ADD_STORAGE /external_sd
+    export EXTERNAL_STORAGE2 /external_sd
+    export EXTERNAL_STORAGE3 /external_sd
+
+#   Support legacy paths
+    symlink /external_sd /sdcard1
+
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/external_sd /external_sd
+    class late_start
+    disabled
+
+# This will make sure that sdcard service starts as late_start.
+on nonencrypted
+    setprop ro.fuse_sdcard ${persist.fuse_sdcard}

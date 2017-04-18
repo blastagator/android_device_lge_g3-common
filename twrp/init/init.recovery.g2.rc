@@ -1,0 +1,8 @@
+import /init.recovery.g2.power.rc
+import /init.recovery.touchtowake.rc
+
+# g2 USB
+import /init.recovery.g2.usb.rc
+
+# This is only copied if the variant has an sd_card
+import /init.recovery.sd_card.rc
