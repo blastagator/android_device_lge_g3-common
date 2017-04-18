@@ -8,12 +8,12 @@ PRODUCT_PACKAGES += \
 # Additional recovery inits
 # Use my twrp recovery init, instead of default recovery init
 PRODUCT_PACKAGES += \
-	init.recovery.g2.rc
+	init.recovery.g3.rc
 
 # Create the normal recovery init with a different name
 # It gets loaded by my twrp init
 PRODUCT_PACKAGES += \
-	init.recovery.g2.power.rc
+	init.recovery.g3.power.rc
 
 # Touch-to-Wake
 PRODUCT_PACKAGES += \
@@ -21,7 +21,7 @@ PRODUCT_PACKAGES += \
 
 # Use g2 usb, instead of TWRP default
 PRODUCT_PACKAGES += \
-	init.recovery.g2.usb.rc
+	init.recovery.g3.usb.rc
 
 
 # SD Card init remains in board config

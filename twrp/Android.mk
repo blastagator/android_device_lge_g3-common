@@ -16,19 +16,19 @@ include $(BUILD_PREBUILT)
 #    Otherwise, the inits will be delated when creating recovery ramdisk
 # Use this instead of the previous recovery init
 include $(CLEAR_VARS)
-LOCAL_MODULE            := init.recovery.g2.rc
+LOCAL_MODULE            := init.recovery.g3.rc
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := RECOVERY_EXECUTABLES
-LOCAL_SRC_FILES         := init/init.recovery.g2.rc
+LOCAL_SRC_FILES         := init/init.recovery.g3.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 # Place the normal recovery init into its own init, which is called by the twrp init
 include $(CLEAR_VARS)
-LOCAL_MODULE            := init.recovery.g2.power.rc
+LOCAL_MODULE            := init.recovery.g3.power.rc
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := RECOVERY_EXECUTABLES
-LOCAL_SRC_FILES         := ../rootdir/etc/init.g2.power.rc
+LOCAL_SRC_FILES         := ../rootdir/etc/init.g3.power.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
@@ -43,9 +43,9 @@ include $(BUILD_PREBUILT)
 
 # USB (use g2 default, plus twrp adds its usb init, so together we're good)
 include $(CLEAR_VARS)
-LOCAL_MODULE            := init.recovery.g2.usb.rc
+LOCAL_MODULE            := init.recovery.g3.usb.rc
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := RECOVERY_EXECUTABLES
-LOCAL_SRC_FILES         := ../rootdir/etc/init.g2.usb.rc
+LOCAL_SRC_FILES         := ../rootdir/etc/init.g3.usb.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
