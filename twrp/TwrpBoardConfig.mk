@@ -20,6 +20,9 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "/data"
 TW_EXTRA_LANGUAGES := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 
+# Can't get HW backed encryption working, cheat with vold :)
+TW_CRYPTO_USE_SYSTEM_VOLD := qseecomd
+
 # Enable f2fs filesystem tools
 # Should be on by default, but turn on just in case
 TARGET_USERIMAGES_USE_F2FS := true
