@@ -60,11 +60,11 @@
 #define NUM_PARAMETERS 10
 
 #ifndef RPM_STAT
-#define RPM_STAT "/d/rpm_stats"
+#define RPM_STAT "/sys/kernel/debug/rpm_stats"
 #endif
 
 #ifndef RPM_MASTER_STAT
-#define RPM_MASTER_STAT "/d/rpm_master_stats"
+#define RPM_MASTER_STAT "/sys/kernel/debug/rpm_master_stats"
 #endif
 
 /* RPM runs at 19.2Mhz. Divide by 19200 for msec */

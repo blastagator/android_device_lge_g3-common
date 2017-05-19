@@ -171,7 +171,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.msm8974
+    power.g3
 
 # Radio
 PRODUCT_PACKAGES += \
