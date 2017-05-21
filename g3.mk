@@ -200,4 +200,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 # Inherit TWRP Stuff
-$(call inherit-product, device/lge/g3-common/twrp/TwrpProduct.mk)
+ifeq ($(WITH_TWRP),true)
+    $(call inherit-product, device/lge/g3-common/twrp/TwrpProduct.mk)
+endif
